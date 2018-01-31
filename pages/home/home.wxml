@@ -1,0 +1,30 @@
+<!--pages/home/home.wxml-->
+<view class="swiper-container">  
+  <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" bindtap='jumpToCourseDetail1'class="swiper">
+    <block wx:for="{{slider}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item.picUrl}}" class="img"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="dots">
+    <block wx:for="{{slider}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+<view class='service'>
+  <text class='text1'>服务中心</text>
+  <text class='text2'>Service Center</text>
+  <button class="button1">一键拨号</button>
+  <button class="button2">一键导航</button>
+  <button class="button3">预约试驾</button>
+  <button class="button4">微信咨询</button>
+</view>
+<view class='show'>
+  <view clss='shu'>
+  </view>
+  <text class='show1'>展示</text>
+
+</view>
+
